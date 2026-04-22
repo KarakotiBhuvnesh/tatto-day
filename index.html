@@ -40,34 +40,16 @@
   </style>
 </head>
 
-
 <body class="bg-bg text-soft font-body">
-
-<!-- HEADER -->
-<!-- <header class="fixed top-0 w-full bg-bg/90 backdrop-blur border-b border-white/10 z-50">
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"> -->
-    <!-- <div class="font-display text-lg tracking-widest">[STUDIO LOGO]</div> -->
-    <!-- <nav class="hidden md:flex gap-8 text-sm">
-      <a href="#portfolio" class="hover:text-accent">Portfolio</a>
-      <a href="#flash" class="hover:text-accent">Flash</a>
-      <a href="#event" class="hover:text-accent">Event</a>
-      <a href="#contact" class="hover:text-accent">Contact</a>
-    </nav>
-
-    <a href="[BOOKING LINK]" class="bg-accent text-black px-5 py-2 text-sm tracking-wide hover:opacity-80">
-      Book Now
-    </a>
-  </div>
-</header> -->
 
 
 <!-- HERO -->
-<section class="relative pt-32 pb-24">
+<section class="relative pt-24 md:pt-32 pb-16 md:pb-24 min-h-[80vh]">
 
   <!-- Background image -->
   <div class="absolute inset-0">
     <img
-      src="./hero.png"         
+      src="./hero.png"
       alt="Backpiece tattoo by [ARTIST NAME]"
       class="w-full h-full object-cover"
     />
@@ -76,112 +58,144 @@
   </div>
 
   <!-- Content -->
-  <div class="relative max-w-7xl mx-auto px-6 flex items-center min-h-[520px]">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 flex items-center min-h-[80vh]">
     <div class="max-w-xl">
 
-      <p class="text-accent uppercase tracking-[0.35em] text-xs mb-4">
+      <p class="text-accent uppercase tracking-[0.3em] text-[0.6rem] sm:text-xs mb-3 sm:mb-4">
         One Day. Exclusive Ink.
       </p>
 
-      <h1 class="font-display text-5xl md:text-6xl leading-tight mb-4">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl leading-tight mb-3 sm:mb-4">
         TATTOO<br/>
         DAY
       </h1>
 
-      <!-- <p class="font-display text-sm tracking-[0.3em] uppercase mb-6">
+      <!-- If you want the "By [Artist]" line back, uncomment this:
+      <p class="font-display text-[0.65rem] sm:text-sm tracking-[0.3em] uppercase mb-5 sm:mb-6">
         By <span class="text-accent">[ARTIST NAME]</span>
-      </p> -->
+      </p>
+      -->
 
-      <p class="text-sm md:text-base text-white/70 mb-10">
+      <p class="text-xs sm:text-sm md:text-base text-white/70 mb-8 sm:mb-10">
         Limited availability. Custom work. Timeless art.
       </p>
 
-      <!-- CTAs -->
-      <div class="flex flex-wrap items-center gap-4 mb-8">
-        <a href="[BOOKING LINK]"
-           class="bg-accent text-black px-6 py-3 text-sm font-medium tracking-wide flex items-center gap-2 hover:opacity-90 transition">
-          Book Your Spot
-          <span>→</span>
-        </a>
-
-        <a href="#flash"
-           class="border border-white/40 px-6 py-3 text-sm font-medium tracking-wide hover:border-accent hover:text-accent transition">
-          View Flash
-        </a>
-      </div>
-
-      <!-- Instagram handle -->
-      <!-- <p class="text-xs md:text-sm text-white/60">
-        @ [INSTAGRAM HANDLE]
-      </p> -->
 
     </div>
   </div>
 </section>
 
 <!-- EVENT BAR -->
-<section id="event" class="border-y border-white/10 py-8 px-6 bg-charcoal">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-3 text-center gap-6">
+<section id="event" class="border-y border-white/10 py-8 px-4 sm:px-6 bg-charcoal">
+  <div class="max-w-7xl mx-auto grid gap-6 text-center md:grid-cols-3">
 
     <div>
-      <p class="text-xs text-white/50">Event Date</p>
-      <p class="font-display text-xl">[DATE]</p>
+      <p class="text-xs text-white/50">Next Event Date</p>
+      <p class="font-display text-xl">25/04/2026 Friday</p>
     </div>
 
     <div>
       <p class="text-xs text-white/50">Tattoo Day</p>
-      <p class="text-sm text-white/70">One-day custom & flash event</p>
+      <p class="font-display text-xl">One-day custom &amp; flash event</p>
     </div>
 
     <div>
       <p class="text-xs text-white/50">Venue</p>
-      <p class="font-display text-xl">[VENUE NAME]</p>
+      <p class="font-display text-xl">9Guests Safdarjung</p>
     </div>
 
   </div>
 </section>
 
+
 <!-- PORTFOLIO -->
-<section id="portfolio" class="py-20 px-6">
+<section id="portfolio" class="py-16 md:py-20 px-4 sm:px-6">
   <div class="max-w-7xl mx-auto">
 
-    <h2 class="font-display text-3xl mb-10">Portfolio</h2>
+    <h2 class="font-display text-2xl sm:text-3xl mb-8 sm:mb-10">Portfolio</h2>
 
-    <!-- FILTERS -->
-    <div class="flex gap-4 mb-8 text-sm">
-      <button class="filter-btn text-accent" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="black">Blackwork</button>
-      <button class="filter-btn" data-filter="realism">Realism</button>
-    </div>
+    <!-- GRID: handles 10–15 images cleanly -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
 
-    <!-- GRID -->
-    <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="[IMG]" data-category="black" class="fade-up object-cover h-64 w-full"/>
-      <img src="[IMG]" data-category="realism" class="fade-up object-cover h-64 w-full"/>
-      <img src="[IMG]" data-category="black" class="fade-up object-cover h-64 w-full"/>
-      <img src="[IMG]" data-category="realism" class="fade-up object-cover h-64 w-full"/>
+      <img
+        src="./4.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./1.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./5.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./2.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./3.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./6.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./7.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+      <img
+        src="./8.png"
+        alt="Tattoo piece 1 by [ARTIST NAME]"
+        class="object-cover w-full h-full 
+         contrast-125 brightness-90 saturate-75 
+         hover:scale-105 transition duration-500"
+      />
+
     </div>
 
   </div>
 </section>
 
 <!-- FLASH -->
-<section id="flash" class="py-20 px-6 bg-charcoal">
+<section id="flash" class="py-16 md:py-20 px-4 sm:px-6 bg-charcoal">
   <div class="max-w-7xl mx-auto">
 
-    <h2 class="font-display text-3xl mb-10">Flash Designs</h2>
+    <h2 class="font-display text-2xl sm:text-3xl mb-8 sm:mb-10">Flash Designs</h2>
 
-    <div class="grid md:grid-cols-4 gap-6">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
 
       <div class="border border-white/10 p-4 fade-up">
-        <img src="[FLASH IMG]" class="mb-4"/>
-        <p>$250</p>
+        <img src="[FLASH IMG]" class="mb-4 object-cover h-40 w-full"/>
+        <p class="text-sm mb-1">$250</p>
         <span class="text-xs text-accent">Available</span>
       </div>
 
       <div class="border border-white/10 p-4 fade-up">
-        <img src="[FLASH IMG]" class="mb-4"/>
-        <p>$300</p>
+        <img src="[FLASH IMG]" class="mb-4 object-cover h-40 w-full"/>
+        <p class="text-sm mb-1">$300</p>
         <span class="text-xs text-red-500">1 Spot Left</span>
       </div>
 
@@ -191,77 +205,96 @@
 </section>
 
 <!-- ABOUT + ANNOUNCEMENTS -->
-<section class="py-20 px-6">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+<section class="py-16 md:py-20 px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
 
+    <!-- LEFT: Artist Image -->
     <div>
-      <h2 class="font-display text-3xl mb-6">About [Artist Name]</h2>
-      <p class="text-white/70 mb-4">
-        Specializing in black & grey realism and fine detail work.
-      </p>
+      <img
+        src="./ipsi.jpeg"
+        alt="Portrait of tattoo artist Ipshita"
+        class="w-full h-[420px] sm:h-[520px] object-cover rounded-sm"
+      />
     </div>
 
-    <div>
-      <h2 class="font-display text-3xl mb-6">Announcements</h2>
+    <!-- RIGHT: About + Announcements -->
+    <div class="space-y-10">
 
-      <div class="space-y-4 text-sm">
-        <p>New flash sheet added — [DATE]</p>
-        <p>Spots filling fast — book now</p>
+      <div>
+        <h2 class="font-display text-2xl sm:text-3xl mb-6">About Ipshita</h2>
+        <p class="text-sm sm:text-base text-white/70 leading-7">
+          Specializing in black &amp; grey realism and fine detail work, Ipshita brings a strong artistic foundation to every piece. With 5 years of experience in art and 1 year of experience in tattooing, she creates custom tattoos that feel personal, intentional, and visually striking.
+        </p>
       </div>
+
+      <div>
+        <h2 class="font-display text-2xl sm:text-3xl mb-6">Announcements</h2>
+
+        <div class="space-y-3 text-xs sm:text-sm text-white/70">
+          <p>New flash sheet added</p>
+          <p>Spots filling fast — book now</p>
+        </div>
+      </div>
+
     </div>
 
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="py-20 px-6 bg-charcoal">
+<section class="py-16 md:py-20 px-4 sm:px-6 bg-charcoal">
   <div class="max-w-7xl mx-auto text-center">
 
-    <h2 class="font-display text-3xl mb-10">What Clients Say</h2>
+    <h2 class="font-display text-2xl sm:text-3xl mb-8 sm:mb-10">What Clients Say</h2>
 
-    <div class="grid md:grid-cols-3 gap-8 text-sm text-white/70">
+    <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm text-white/70">
       <p>"Incredible detail and professionalism."</p>
-      <p>"Best tattoo experience I've had."</p>
-      <p>"Exceeded all expectations."</p>
+      <p>"She is really fast with it for this level of detailing."</p>
+      <p>"Never expected tattoos to turn out this good at such an affordable price."</p>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 px-6">
+<!-- <section id="contact" class="py-16 md:py-20 px-4 sm:px-6">
   <div class="max-w-5xl mx-auto">
 
-    <h2 class="font-display text-3xl mb-10">Book Your Spot</h2>
+    <h2 class="font-display text-2xl sm:text-3xl mb-8 sm:mb-10">Book Your Spot</h2>
 
-    <form class="grid md:grid-cols-2 gap-6">
+    <form class="grid md:grid-cols-2 gap-4 sm:gap-6">
 
-      <input placeholder="Full Name" class="bg-charcoal p-3"/>
-      <input placeholder="Email" class="bg-charcoal p-3"/>
-      <input placeholder="Phone" class="bg-charcoal p-3"/>
-      <input placeholder="Instagram" class="bg-charcoal p-3"/>
+      <input placeholder="Full Name"
+             class="bg-charcoal p-3 rounded-sm w-full text-sm" />
+      <input placeholder="Email"
+             class="bg-charcoal p-3 rounded-sm w-full text-sm" />
+      <input placeholder="Phone"
+             class="bg-charcoal p-3 rounded-sm w-full text-sm" />
+      <input placeholder="Instagram"
+             class="bg-charcoal p-3 rounded-sm w-full text-sm" />
 
-      <textarea placeholder="Tattoo Idea" class="bg-charcoal p-3 md:col-span-2"></textarea>
+      <textarea placeholder="Tattoo Idea"
+                class="bg-charcoal p-3 rounded-sm w-full text-sm md:col-span-2 h-32"></textarea>
 
-      <button class="bg-accent text-black py-3 md:col-span-2">
+      <button class="bg-accent text-black py-3 md:col-span-2 text-sm font-medium tracking-wide">
         Request Booking
       </button>
 
     </form>
 
   </div>
-</section>
+</section> -->
 
 <!-- FOOTER -->
-<footer class="border-t border-white/10 py-10 px-6 text-sm text-white/50">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4">
+<footer class="border-t border-white/10 py-8 md:py-10 px-4 sm:px-6 text-xs sm:text-sm text-white/50">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-3 md:gap-4">
     <p>© [YEAR] [ARTIST NAME]</p>
     <p>@[INSTAGRAM HANDLE]</p>
   </div>
 </footer>
 
 <!-- FILTER SCRIPT -->
-<script>
+<!-- <script>
   const buttons = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll("#gallery img");
 
@@ -269,15 +302,18 @@
     btn.addEventListener("click", () => {
       const filter = btn.dataset.filter;
 
+      buttons.forEach(b => b.classList.remove("text-accent", "underline"));
+      btn.classList.add("text-accent");
+
       items.forEach(item => {
         item.style.display =
           filter === "all" || item.dataset.category === filter
-          ? "block"
-          : "none";
+            ? "block"
+            : "none";
       });
     });
   });
-</script>
+</script> -->
 
 </body>
 </html>
