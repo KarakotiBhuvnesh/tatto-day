@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[ARTIST NAME] — Tattoo Day</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0a0a0a",
+            charcoal: "#121212",
+            soft: "#e7e5e4",
+            accent: "#c6a16e"
+          },
+          fontFamily: {
+            display: ["Playfair Display", "serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .fade-up {
+      transition: all 0.4s ease;
+    }
+    .fade-up:hover {
+      transform: translateY(-6px);
+    }
+  </style>
+</head>
+
+
+<body class="bg-bg text-soft font-body">
+
+<!-- HEADER -->
+<!-- <header class="fixed top-0 w-full bg-bg/90 backdrop-blur border-b border-white/10 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4"> -->
+    <!-- <div class="font-display text-lg tracking-widest">[STUDIO LOGO]</div> -->
+    <!-- <nav class="hidden md:flex gap-8 text-sm">
+      <a href="#portfolio" class="hover:text-accent">Portfolio</a>
+      <a href="#flash" class="hover:text-accent">Flash</a>
+      <a href="#event" class="hover:text-accent">Event</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+    </nav>
+
+    <a href="[BOOKING LINK]" class="bg-accent text-black px-5 py-2 text-sm tracking-wide hover:opacity-80">
+      Book Now
+    </a>
+  </div>
+</header> -->
+
+
+<!-- HERO -->
+<section class="relative pt-32 pb-24">
+
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img
+      src="./hero.png"         
+      alt="Backpiece tattoo by [ARTIST NAME]"
+      class="w-full h-full object-cover"
+    />
+    <!-- Dark overlay for contrast -->
+    <div class="absolute inset-0 bg-black/30"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-6 flex items-center min-h-[520px]">
+    <div class="max-w-xl">
+
+      <p class="text-accent uppercase tracking-[0.35em] text-xs mb-4">
+        One Day. Exclusive Ink.
+      </p>
+
+      <h1 class="font-display text-5xl md:text-6xl leading-tight mb-4">
+        TATTOO<br/>
+        DAY
+      </h1>
+
+      <!-- <p class="font-display text-sm tracking-[0.3em] uppercase mb-6">
+        By <span class="text-accent">[ARTIST NAME]</span>
+      </p> -->
+
+      <p class="text-sm md:text-base text-white/70 mb-10">
+        Limited availability. Custom work. Timeless art.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap items-center gap-4 mb-8">
+        <a href="[BOOKING LINK]"
+           class="bg-accent text-black px-6 py-3 text-sm font-medium tracking-wide flex items-center gap-2 hover:opacity-90 transition">
+          Book Your Spot
+          <span>→</span>
+        </a>
+
+        <a href="#flash"
+           class="border border-white/40 px-6 py-3 text-sm font-medium tracking-wide hover:border-accent hover:text-accent transition">
+          View Flash
+        </a>
+      </div>
+
+      <!-- Instagram handle -->
+      <!-- <p class="text-xs md:text-sm text-white/60">
+        @ [INSTAGRAM HANDLE]
+      </p> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- EVENT BAR -->
+<section id="event" class="border-y border-white/10 py-8 px-6 bg-charcoal">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 text-center gap-6">
+
+    <div>
+      <p class="text-xs text-white/50">Event Date</p>
+      <p class="font-display text-xl">[DATE]</p>
+    </div>
+
+    <div>
+      <p class="text-xs text-white/50">Tattoo Day</p>
+      <p class="text-sm text-white/70">One-day custom & flash event</p>
+    </div>
+
+    <div>
+      <p class="text-xs text-white/50">Venue</p>
+      <p class="font-display text-xl">[VENUE NAME]</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="font-display text-3xl mb-10">Portfolio</h2>
+
+    <!-- FILTERS -->
+    <div class="flex gap-4 mb-8 text-sm">
+      <button class="filter-btn text-accent" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="black">Blackwork</button>
+      <button class="filter-btn" data-filter="realism">Realism</button>
+    </div>
+
+    <!-- GRID -->
+    <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="[IMG]" data-category="black" class="fade-up object-cover h-64 w-full"/>
+      <img src="[IMG]" data-category="realism" class="fade-up object-cover h-64 w-full"/>
+      <img src="[IMG]" data-category="black" class="fade-up object-cover h-64 w-full"/>
+      <img src="[IMG]" data-category="realism" class="fade-up object-cover h-64 w-full"/>
+    </div>
+
+  </div>
+</section>
+
+<!-- FLASH -->
+<section id="flash" class="py-20 px-6 bg-charcoal">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="font-display text-3xl mb-10">Flash Designs</h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+      <div class="border border-white/10 p-4 fade-up">
+        <img src="[FLASH IMG]" class="mb-4"/>
+        <p>$250</p>
+        <span class="text-xs text-accent">Available</span>
+      </div>
+
+      <div class="border border-white/10 p-4 fade-up">
+        <img src="[FLASH IMG]" class="mb-4"/>
+        <p>$300</p>
+        <span class="text-xs text-red-500">1 Spot Left</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT + ANNOUNCEMENTS -->
+<section class="py-20 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+
+    <div>
+      <h2 class="font-display text-3xl mb-6">About [Artist Name]</h2>
+      <p class="text-white/70 mb-4">
+        Specializing in black & grey realism and fine detail work.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="font-display text-3xl mb-6">Announcements</h2>
+
+      <div class="space-y-4 text-sm">
+        <p>New flash sheet added — [DATE]</p>
+        <p>Spots filling fast — book now</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 px-6 bg-charcoal">
+  <div class="max-w-7xl mx-auto text-center">
+
+    <h2 class="font-display text-3xl mb-10">What Clients Say</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 text-sm text-white/70">
+      <p>"Incredible detail and professionalism."</p>
+      <p>"Best tattoo experience I've had."</p>
+      <p>"Exceeded all expectations."</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <h2 class="font-display text-3xl mb-10">Book Your Spot</h2>
+
+    <form class="grid md:grid-cols-2 gap-6">
+
+      <input placeholder="Full Name" class="bg-charcoal p-3"/>
+      <input placeholder="Email" class="bg-charcoal p-3"/>
+      <input placeholder="Phone" class="bg-charcoal p-3"/>
+      <input placeholder="Instagram" class="bg-charcoal p-3"/>
+
+      <textarea placeholder="Tattoo Idea" class="bg-charcoal p-3 md:col-span-2"></textarea>
+
+      <button class="bg-accent text-black py-3 md:col-span-2">
+        Request Booking
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 py-10 px-6 text-sm text-white/50">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4">
+    <p>© [YEAR] [ARTIST NAME]</p>
+    <p>@[INSTAGRAM HANDLE]</p>
+  </div>
+</footer>
+
+<!-- FILTER SCRIPT -->
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll("#gallery img");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+
+      items.forEach(item => {
+        item.style.display =
+          filter === "all" || item.dataset.category === filter
+          ? "block"
+          : "none";
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
